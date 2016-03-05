@@ -1,6 +1,9 @@
 package com.example.salis.c1541078bj_task3;
 
 
+
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.Letter_Counting) {
-            return true;
+
+            Intent LCount = new Intent(this, Main2Activity.class);
+            startActivity(LCount);
+            return (true);
+
         }
 
         return super.onOptionsItemSelected(item);
