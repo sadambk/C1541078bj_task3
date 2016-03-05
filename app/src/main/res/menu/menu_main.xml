@@ -2,9 +2,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.salis.c1541078bj_task3.MainActivity">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/Letter_Counting"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Letter Counting Game"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/Game_2"
+        android:orderInCategory="100"
+        android:title="Game 2"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Game_3"
+        android:orderInCategory="100"
+        android:title="Game 3"
+        app:showAsAction="never" />
+
+
 </menu>

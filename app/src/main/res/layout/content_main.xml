@@ -18,8 +18,7 @@
     <TextView
         android:layout_width="496dp"
         android:layout_height="wrap_content"
-        android:text="                 Game Center.
-        Use Action Bar to Select A game!"
+        android:text="Welocome to Game Center. Please Use the Action Bar to Select A game!"
         android:textSize="20sp"
         android:id="@+id/textView"
         android:textStyle="bold|italic"
@@ -70,30 +69,25 @@
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
 
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:textColor="#ffffff"
-        android:textStyle="bold|italic"
-        android:textIsSelectable="false"
-        android:textSize="15sp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="0/0"
         android:id="@+id/textView4"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="28dp"
         android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_below="@+id/textView3"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
         android:textColor="#ffffff" />
+
+    <AnalogClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/analogClock"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

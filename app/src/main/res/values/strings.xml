@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">C1541078bj_task3</string>
-    <string name="action_settings">Settings</string>
+
+    <string name="Letter_Counting">Letter Counting Game</string>
+    <string name="Game_2">Game 2</string>
+    <string name="Game_3">Game 3</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
