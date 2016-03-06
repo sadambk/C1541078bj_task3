@@ -69,25 +69,23 @@
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0/0"
-        android:id="@+id/textView4"
-        android:layout_marginTop="28dp"
-        android:textSize="20sp"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textColor="#ffffff" />
-
     <AnalogClock
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/analogClock"
-        android:layout_marginTop="49dp"
         android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0"
+        android:id="@+id/textView4"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
