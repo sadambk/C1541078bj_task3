@@ -3,11 +3,8 @@ package com.example.salis.c1541078bj_task3;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -20,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     int counter = 0;
     TextView scoreText;
     EditText UserName;
+    TextView scoreText2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         UserName = (EditText)findViewById(R.id.editText);
         scoreText = (TextView)findViewById(R.id.textView4);
+        scoreText2 = (TextView)findViewById(R.id.textView5);
 
     }
 
@@ -53,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.Letter_Counting) {
 
             Intent LCount = new Intent(this, Main2Activity.class);
+
             LCount.putExtra("Username", UserName.getText().toString());
             startActivityForResult(LCount, 1);
 
@@ -70,9 +70,22 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
 
                 ++counter;
+                { scoreText2.setText("/" + String.valueOf(counter));}
+
+
                 scoreText.setText(String.valueOf(counter));
-            } else {
-                Toast.makeText(getApplicationContext(), "No Score to record!", Toast.LENGTH_LONG).show();
+
+
+            }
+            else if (resultCode != Activity.RESULT_CANCELED){
+                ++counter;
+
+                scoreText2.setText("/" + String.valueOf(counter));
+
+            }
+else {
+                Toast.makeText(getApplicationContext(), "No game played!!!", Toast.LENGTH_LONG).show();
+
             }
         }
 
