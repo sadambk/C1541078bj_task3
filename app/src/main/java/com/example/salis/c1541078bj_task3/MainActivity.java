@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int counter = 0;
+
     TextView scoreText;
     EditText UserName;
     TextView scoreText2;
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         UserName = (EditText)findViewById(R.id.editText);
         scoreText = (TextView)findViewById(R.id.textView4);
-        scoreText2 = (TextView)findViewById(R.id.textView5);
 
     }
 
@@ -69,21 +68,19 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 1) {
             if (resultCode == Activity.RESULT_OK) {
 
-                ++counter;
-                { scoreText2.setText("/" + String.valueOf(counter));}
+                String result=data.getStringExtra("result");
 
+                scoreText.setText(result +"/" + result);
 
-                scoreText.setText(String.valueOf(counter));
+}
+            else if (resultCode == Activity.RESULT_FIRST_USER){
+                String result=data.getStringExtra("result");
+                String result1=data.getStringExtra("result1");
 
-
-            }
-            else if (resultCode != Activity.RESULT_CANCELED){
-                ++counter;
-
-                scoreText2.setText("/" + String.valueOf(counter));
+                scoreText.setText(result +"/" + result1 );
 
             }
-else {
+        else if(resultCode == Activity.RESULT_CANCELED) {
                 Toast.makeText(getApplicationContext(), "No game played!!!", Toast.LENGTH_LONG).show();
 
             }
